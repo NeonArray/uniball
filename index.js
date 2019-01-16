@@ -24,13 +24,6 @@ let player;
 let balls;
 let groups = {};
 let counter = 0;
-let wild;
-
-
-function preload() {
-    GAME.load.spritesheet('ball', 'balls.png', 10, 10, 3);
-    GAME.load.spritesheet('player', 'player.png', 15, 15, 3);
-}
 
 function createBall(group) {
     const ball = groups[group].create(
@@ -77,6 +70,14 @@ function checkCollision(playerCollider, ballCollider) {
     }
 
     ballCollider.destroy();
+    // pop.start();
+}
+
+
+function preload() {
+    GAME.forceSingleUpdate = true;
+    GAME.load.spritesheet('ball', 'balls.png', 10, 10, 3);
+    GAME.load.spritesheet('player', 'player.png', 15, 15, 3);
 }
 
 function create() {
