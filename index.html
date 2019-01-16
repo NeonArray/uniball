@@ -3,9 +3,31 @@
 <head>
     <meta charset="utf-8"/>
     
-    <title></title>
+    <title>Color Balls & Stuff</title>
+
+    <style>
+    body {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        font-family: system-ui, sans-serif;
+        height: 100%;
+        justify-content: center;
+        width: 100%;
+    }
+    p {
+        line-height: 1.2;
+        max-width: 600px;
+    }
+    canvas {
+        border: 2px solid #e8e8e8;
+    }
+    </style>
 </head>
 <body>
+    <p>Collect the same color balls as you. Pick up a wild (balls that change color) to change to that color. If you collect a ball that doesn't match your color, the games over.</p>
+    <p>Move with arrow keys</p>
+
     <script src="https://cdn.jsdelivr.net/npm/phaser-ce@2.11.1/build/phaser.min.js"></script>
     <script src="./index.js"></script>
 </body>
