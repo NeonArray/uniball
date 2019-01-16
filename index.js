@@ -99,6 +99,9 @@ function create() {
     player.body.collideWorldBounds = true;
     player.body.setCircle(PLAYER_RADIUS);
     player.animations.add('color');
+    
+    const playerMicroTween = GAME.add.tween(player).to({ width: 10, height: 10 }, 500, Phaser.Easing.Linear.None, true, 0, -1, true);
+    playerMicroTween.start();
 
     createBall('wild');
 
@@ -131,5 +134,3 @@ function update() {
         player.y += PLAYER_SPEED;
     }
 }
-
-function render() {}
