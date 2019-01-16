@@ -70,7 +70,6 @@ function checkCollision(playerCollider, ballCollider) {
     }
 
     ballCollider.destroy();
-    // pop.start();
 }
 
 
