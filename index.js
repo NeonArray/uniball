@@ -70,14 +70,10 @@ function changePlayerColor(playerCollider, wildCollider) {
 
 function checkCollision(playerCollider, ballCollider) {
     if (playerCollider.animations.frame !== ballCollider.animations.frame) {
-        gameOver();   
+        GAME.state.restart(); 
     }
 
     ballCollider.destroy();
-}
-
-function gameOver() {
-    console.log('game over');
 }
 
 function create() {
