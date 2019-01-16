@@ -34,8 +34,8 @@ function preload() {
 
 function createBall(group) {
     const ball = groups[group].create(
-        randomVector(), 
-        randomVector(), 
+        randomVectorPoint(), 
+        randomVectorPoint(), 
         'ball',
         BALL_COLOR_ID.indexOf(group), 
         true
@@ -57,7 +57,7 @@ function createBall(group) {
     return ball;
 }
 
-function randomVector() {
+function randomVectorPoint() {
     return Math.random() * (VIEWPORT_WIDTH - BALL_RADIUS) + BALL_RADIUS;
 }
 
