@@ -41,7 +41,7 @@ function createBall(group) {
         true
     );
     ball.anchor.setTo(0.5);
-    ball.body.velocity.setTo(randomVelocity());
+    
     ball.body.collideWorldBounds = true;
     ball.body.bounce.set(1);
     ball.body.setCircle(BALL_RADIUS);
@@ -49,6 +49,9 @@ function createBall(group) {
     if (group === 'wild') {
         ball.animations.add('flash');
         ball.animations.play('flash', 1, true);
+        ball.body.velocity.setTo(25);
+    } else {
+        ball.body.velocity.setTo(randomVelocity());
     }
 
     return ball;
