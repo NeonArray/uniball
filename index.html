@@ -3,30 +3,54 @@
 <head>
     <meta charset="utf-8"/>
     
-    <title>Color Balls & Stuff</title>
+    <title>Uniball - Aaron Arney</title>
 
     <style>
+    :root {
+        --swan-white: #f7f1e3;
+        --purple: #2c2c54;
+        --grey: #84817a;
+    }
     body {
         align-items: center;
+        background: var(--swan-white);
         display: flex;
         flex-direction: column;
         font-family: system-ui, sans-serif;
-        height: 100%;
         justify-content: center;
-        width: 100%;
+    }
+    h1 {
+        color: var(--purple);
+        margin-bottom: 10px;
+    }
+    .author {
+        font-size: 12px;
+        margin: 0;
     }
     p {
         line-height: 1.2;
         max-width: 600px;
     }
     canvas {
-        border: 2px solid #e8e8e8;
+        border: 2px solid var(--purple);
+    }
+    .arrow {
+        border: 2px solid var(--purple);
+        border-radius: 8px;
+        display: inline-block;
+        padding: 5px;
+        text-align: center;
+        width: 17px;
     }
     </style>
 </head>
 <body>
+    <h1>Uniball</h1>
+    <p class="author">By Aaron Arney</p>
+
     <p>Collect the same color balls as you. Pick up a wild (balls that change color) to change to that color. If you collect a ball that doesn't match your color, the games over.</p>
-    <p>Move with arrow keys</p>
+
+    <p><em>Move with</em> <span class="arrow">&#8678;</span> <span class="arrow">&#8679;</span> <span class="arrow">&#8680;</span> <span class="arrow">&#8681;</span></p>
 
     <script src="https://cdn.jsdelivr.net/npm/phaser-ce@2.11.1/build/phaser.min.js"></script>
     <script src="./index.js"></script>
