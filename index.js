@@ -8,7 +8,7 @@ const BALL_COLOR_ID = ['red', 'blue', 'yellow'];
 const MIN_VELOCITY = 15;
 const MAX_VELOCITY = 200;
 const GAME = new Phaser.Game({
-    backgroundColor: '#fff',
+    backgroundColor: '#efefef',
     height: VIEWPORT_HEIGHT,
     parent: 'game',
     state: {
